@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import User from "./components/user/User";
+import SimpsonComponent from "./components/user/SimpsonComponent";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div >
+            <h1>hello</h1>
+            <User name={'vasyl'} age={31}/>
+            <User name={'petro'} age={41}/>
+
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f15f5662080793.5a8432e3d5b6b.jpg"/>
+
+            <SimpsonComponent/>
+        </div>
+    );
+
 }
 
 export default App;
