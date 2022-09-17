@@ -1,14 +1,27 @@
 // import logo from './logo.svg';
 import './App.css';
-import User from "./components/user/User";
+import {useEffect, useState} from "react";
+import UserComponent from "./components/UserComponent";
 
 function App() {
-    return (
-        <div >
-            <h1>hello</h1>
-            <User name={'vasyl'} age={31}/>
-            <User name={'petro'} age={41}/>
 
+    let [users, setUsers] = useState( []);
+        useEffect( () => {
+            fetch('https://jsonplaceholder.typicode.com/users')
+                .then(value => value.json())
+                .then(value => {
+                    setUsers (value);
+                    console.log(value);
+                });
+        }, []);
+
+
+    return (
+        <div>
+
+            {
+                users.map(value => <UserComponent item = {value} />)
+            }
 
         </div>
     );
