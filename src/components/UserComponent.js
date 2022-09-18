@@ -10,6 +10,12 @@ export default function UserComponent(props) {
     )
 }
 
+function max (a, b) {
+    return new Promise( (resolve, reject) => {})
+}
+
+
+
 // export default function UserComponent(props) {
 // let {item} = props;
 //

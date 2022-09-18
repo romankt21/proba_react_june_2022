@@ -2,17 +2,16 @@
 import './App.css';
 import {useEffect, useState} from "react";
 import UserComponent from "./components/UserComponent";
+import {getUsers} from "./services/userService";
 
 function App() {
 
     let [users, setUsers] = useState( []);
+
         useEffect( () => {
-            fetch('https://jsonplaceholder.typicode.com/users')
-                .then(value => value.json())
-                .then(value => {
-                    setUsers (value);
-                    console.log(value);
-                });
+            getUsers().then(value => setUsers([...value]));
+
+
         }, []);
 
 
@@ -20,8 +19,11 @@ function App() {
         <div>
 
             {
-                users.map(value => <UserComponent item = {value} />)
+                users.map(value => <UserComponent
+                    key = {value.id}
+                    item = {value} />)
             }
+
 
         </div>
     );
