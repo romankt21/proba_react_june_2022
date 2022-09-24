@@ -1,10 +1,14 @@
 import {useLocation} from "react-router";
 
 export default function UserDetails() {
-    useLocation()
+    let location = useLocation();
+    let {state:user} = location;
+
     return (
         <div>
-            UserDetails
+            {
+                JSON.stringify(user)
+            }
         </div>
     );
 }

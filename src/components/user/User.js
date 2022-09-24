@@ -12,9 +12,9 @@ export default function User(props) {
             <Link to={'/users/' + user.id} state={{...user}}>details</Link>
         </div>
 
-        {/*<div>*/}
-        {/*    <Link to={'/users/v2/' + user.id}>user details v2</Link>*/}
-        {/*</div>*/}
+        <div>
+            <Link to={'/users/v2/' + user.id}>user details v2</Link>
+        </div>
         <hr/>
     </div>);
 }

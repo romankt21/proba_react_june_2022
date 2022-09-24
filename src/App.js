@@ -13,6 +13,8 @@ import {
 import Home from "./components/home/Home";
 import Users from "./components/users/Users";
 import UserDetails from "./components/userdetails/UserDetails";
+import UserDetailsV2 from "./components/userdetailsv2/UserDetailsV2";
+import Posts from "./components/posts/Posts";
 
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
             <Route index element={<Home/>}/>
             <Route path={'users'} element={<Users/>}/>
             <Route path={'users/:id'} element={<UserDetails/>}/>
+            <Route path={'users/v2/:id'} element={<UserDetailsV2/>}/>
+            <Route path={'posts'}   element={<Posts/>}/>
 
             </Routes>
 
