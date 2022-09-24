@@ -7,16 +7,18 @@ import {
     BrowserRouter,
     Routes,
     Route,
-    link,
-    Outlet, Link
+    Link,
+    Outlet,
 } from "react-router-dom";
 import Home from "./components/home/Home";
+import Users from "./components/users/Users";
+import UserDetails from "./components/userdetails/UserDetails";
 
 
 function App() {
     return (
         <div >
-            {/*<h1>hello</h1>*/}
+
             <ul>
                 <li><Link to={'/'}>Home page</Link></li>
                 <li><Link to={'/users'}>all users page</Link></li>
@@ -28,16 +30,13 @@ function App() {
             <hr/>
             <Routes>
 
-                <Route path={'/'} element={<Home/>}/>
-
+            <Route index element={<Home/>}/>
+            <Route path={'users'} element={<Users/>}/>
+            <Route path={'users/:id'} element={<UserDetails/>}/>
 
             </Routes>
 
             <hr/>
-
-
-
-
 
 
         </div>
