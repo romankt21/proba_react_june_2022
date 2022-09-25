@@ -15,6 +15,7 @@ import Users from "./components/users/Users";
 import UserDetails from "./components/userdetails/UserDetails";
 import UserDetailsV2 from "./components/userdetailsv2/UserDetailsV2";
 import Posts from "./components/posts/Posts";
+import PostDetails from "./components/postdetails/PostDetails";
 
 
 function App() {
@@ -36,7 +37,10 @@ function App() {
             <Route path={'users'} element={<Users/>}/>
             <Route path={'users/:id'} element={<UserDetails/>}/>
             <Route path={'users/v2/:id'} element={<UserDetailsV2/>}/>
-            <Route path={'posts'}   element={<Posts/>}/>
+            <Route path={'posts'} element={<Posts/>}>
+                <Route path={':id'} element={<PostDetails/>}/>
+
+            </Route>
 
             </Routes>
 

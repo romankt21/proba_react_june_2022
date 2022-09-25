@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
-import Post from "../post/post";
+import Post from "../post/Post";
+import {Outlet} from "react-router-dom";
 
 export default function Posts() {
 
@@ -19,6 +20,8 @@ export default function Posts() {
 
     return (
         <div>
+            <Outlet/>
+
             {
                 posts.map(value => <Post
                     key={value.id}
