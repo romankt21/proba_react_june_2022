@@ -5,6 +5,8 @@ export default function User(props) {
             <h2>{user.id} - {user.name}</h2>
             <p>{user.address.city} <br/> {user.email}</p>
 
+            <button>details</button>
+
         </div>
     )
 }

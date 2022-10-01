@@ -1,10 +1,17 @@
 import User from "../user/User";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 
 
 export default function Users() {
     let [users, setusers] = useState([]);
+    let [user, setUser] = useState(null);
+
+    const lift = (id) => {
+        console.log(id)
+    }
+
+    useEffect(()=> {
 
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(value => value.json())
@@ -12,10 +19,24 @@ export default function Users() {
             setusers(value);
         });
 
+    },[])
 
     return (
         <div>
-            {users.map((user ,index) => (<User item={user} key={index}/>))}
+            <hr/>
+            {/*{user && <div> {JSON.stringify(user)} </div> }*/}
+            {/*{user? <div>plus</div>:<div>minus</div>}*/}
+
+            {JSON.stringify(user)}
+
+
+
+            <hr/>
+
+
+            {
+                users
+                    .map((user ,index) => (<User item={user} key={index} lift={lift}/>))}
 
         </div>
     )
