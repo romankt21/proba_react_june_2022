@@ -3,11 +3,13 @@ import './App.css';
 
 
 import Users from "./components/users/Users";
+import UserChoser from "./userChoser/UserChoser";
 
 function App() {
     return (
         <div>
-            <Users/>
+            {/*<Users/>*/}
+            <UserChoser/>
         </div>
     );
 
