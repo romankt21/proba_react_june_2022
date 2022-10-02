@@ -4,11 +4,12 @@ import {useEffect, useState} from "react";
 
 
 export default function Users() {
-    let [users, setusers] = useState([]);
+    let [users, setUsers] = useState([]);
     let [user, setUser] = useState(null);
 
-    const lift = (id) => {
-        console.log(id)
+    const lift = (obj) => {
+        console.log(obj);
+        setUser(obj)
     }
 
     useEffect(()=> {
@@ -16,7 +17,7 @@ export default function Users() {
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(value => value.json())
         .then(value => {
-            setusers(value);
+            setUsers(value);
         });
 
     },[])
@@ -27,8 +28,8 @@ export default function Users() {
             {/*{user && <div> {JSON.stringify(user)} </div> }*/}
             {/*{user? <div>plus</div>:<div>minus</div>}*/}
 
-            {JSON.stringify(user)}
-
+            {/*{JSON.stringify(user)}*/}
+            <h3>{user?.username}</h3>
 
 
             <hr/>
@@ -36,8 +37,8 @@ export default function Users() {
 
             {
                 users
-                    .map((user ,index) => (<User item={user} key={index} lift={lift}/>))}
+                    .map((user, index) => (<User item={user} key={index} lift={lift}/>))}
 
         </div>
-    )
+    );
 }
