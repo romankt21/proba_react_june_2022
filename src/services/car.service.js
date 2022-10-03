@@ -8,3 +8,7 @@ const carService = {
     updateById:(id)=>axiosService.put(`{urls.cars}/{id}`),
     deleteById:(id)=>axiosService.delete(`{urls.cars}/{id}`)
 }
+
+export {
+    carService
+}
