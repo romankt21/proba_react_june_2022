@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Carform = () => {
+const CarForm = () => {
     return (
         <div>
-            
+            CarForm
         </div>
     );
 };
 
-export default Carform;
+export default CarForm;
