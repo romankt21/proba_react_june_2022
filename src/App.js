@@ -1,16 +1,15 @@
 // import logo from './logo.svg';
 import './App.css';
+import {Users} from "./components";
+
 
 function App() {
-    return (
-        <div >
-            <h1>hello</h1>
 
 
+    return (<div>
 
-        </div>
-    );
-
+        <Users/>
+    </div>);
 }
 
 export default App;
