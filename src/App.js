@@ -1,13 +1,11 @@
 // import logo from './logo.svg';
 import './App.css';
+import Characters from "./components/characters/Characters";
 
 function App() {
     return (
         <div >
-            <h1>hello</h1>
-
-
-
+            <Characters/>
         </div>
     );
 
