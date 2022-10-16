@@ -7,4 +7,5 @@ const User = ({user,showUser}) => {
         </div>
     )
 }
+
 export {User};

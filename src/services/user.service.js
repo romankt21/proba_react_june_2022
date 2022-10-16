@@ -5,4 +5,5 @@ const userService = {
     getAll: () => axiosService.get(urls.users)
 }
 
+
 export {userService};
