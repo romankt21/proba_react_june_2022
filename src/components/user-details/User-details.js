@@ -7,5 +7,4 @@ const UserDetails = ({user}) => {
         </div>
     )
 }
-
 export {UserDetails};

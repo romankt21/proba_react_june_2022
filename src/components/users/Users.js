@@ -34,6 +34,4 @@ const Users = () => {
 
     )
 }
-
-
 export {Users}
