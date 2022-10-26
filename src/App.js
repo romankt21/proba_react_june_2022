@@ -1,10 +1,11 @@
 // import logo from './logo.svg';
 import './App.css';
+import {Cars} from "./components";
 
 function App() {
     return (
         <div >
-            <h1>hello</h1>
+            <Cars/>
 
 
 
