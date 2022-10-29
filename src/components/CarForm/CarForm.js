@@ -7,15 +7,18 @@ import {useEffect} from "react";
 
 const CarForm = ({setCars}) => {
     const {register, handleSubmit, reset, formState: {errors, isValid}, setValue} = useForm({
-        resolver:joiResolver(carValidator),
+        // resolver:joiResolver(carValidator),
         mode:'all'
     });
 
     useEffect(()=> {
-        setValue('model', '')
+        setValue('model', 'BMW')
+        setValue('price', '0')
+        setValue('year', '1990')
     },[])
 
     const submit = async (car) => {
+        console.log(car)
        const {data} = await carService.create(car);
         setCars(cars=>[...cars, data])
         reset ()
@@ -33,11 +36,13 @@ const CarForm = ({setCars}) => {
 
     <form onSubmit={handleSubmit(submit)}>
             <input type="text" placeholder={'model'} {...register('model')}/>
-            {errors.model&&<span>{errors.model.message}</span>}
+            {errors.model && <span>{errors.model.message}</span>}
             <input type="text" placeholder={'price'} {...register('price', {valueAsNumber: true})}/>
-            {errors.price&&<span>{errors.price.message}</span>}
+            {errors.price && <span>{errors.price.message}</span>}
             <input type="text" placeholder={'year'} {...register('year', {valueAsNumber: true})}/>
-            {errors.year&&<span>{errors.year.message}</span>}
+            {errors.year && <span>{errors.year.message}</span>}
+            <input type="text" placeholder={'engine'} {...register('property.engine', {valueAsNumber:true})}/>
+            <input type="text" placeholder={'wheels'} {...register('property.wheels', {valueAsNumber:true})}/>
             <button disabled={!isValid}>Save</button>
         </form>
 
