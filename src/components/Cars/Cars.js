@@ -7,6 +7,7 @@ const Cars = () => {
     const [cars, setCars] = useState([]);
 
 
+
     useEffect(()=>{
         carService.getAll().then(({data})=>setCars(data))
         }, [])

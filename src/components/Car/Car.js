@@ -1,6 +1,7 @@
 import css from './Car.module.css';
 import {carService} from "../../services";
 
+
 const Car = ({car, setCars}) => {
     const {id, model, price, year} = car;
     const deleteCar = async () => {
