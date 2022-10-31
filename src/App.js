@@ -1,10 +1,11 @@
 // import logo from './logo.svg';
 import './App.css';
+import Simpsons from "./components/simpsons/Simpsons";
 
 function App() {
     return (
         <div >
-            <h1>hello</h1>
+            <Simpsons/>
 
 
 
