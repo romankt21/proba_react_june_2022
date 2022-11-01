@@ -1,3 +1,2 @@
-export * from './simpsons/Simpsons';
-export * from './simpson/Simpson';
-export * from './data/Data'
+export * from './character/Character'
+export * from './characters/Characters'
