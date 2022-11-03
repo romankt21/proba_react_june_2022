@@ -1,4 +1,4 @@
-export default function User({userProps, showUser}) {
+const User = ({userProps, showUser}) => {
 
     return (
         <div>
@@ -7,3 +7,5 @@ export default function User({userProps, showUser}) {
         </div>
     )
 }
+
+export {User}

@@ -1,4 +1,4 @@
-export default function UserDetails({userProps}) {
+const UserDetails = ({userProps}) => {
     return (
         <div>
             <h3>{userProps.name}</h3>
@@ -6,3 +6,5 @@ export default function UserDetails({userProps}) {
         </div>
     )
 }
+
+export {UserDetails}
